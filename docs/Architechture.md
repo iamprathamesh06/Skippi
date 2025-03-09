@@ -9,13 +9,14 @@
 6. **Detailed Architecture**
 7. **Directory Structure**
 8. **Phase-wise Execution**
-9. **Backend API Design**
-10. **Database Schema**
-11. **LLM Model Selection**
-12. **Tools and Technologies**
-13. **Addressing Common Questions**
-14. **Future Objectives & Vision**
-15. **Conclusion**
+9. **User Stories**
+10. **Backend API Design**
+11. **Database Schema**
+12. **LLM Model Selection**
+13. **Tools and Technologies**
+14. **Addressing Common Questions**
+15. **Future Objectives & Vision**
+16. **Conclusion**
 
 ---
 
@@ -137,6 +138,37 @@ The LMS will:
 - Introduce user-specific learning paths
 - AI-generated assessments & next steps
 - Dynamic roadmap creation
+
+---
+## 9. User Stories
+
+### **Phase 1: Basic LMS & Content Generation**
+ - As a new user, I want to create an account and log in so that I can access my personalized learning dashboard.
+
+- As a learner, I want to input my learning goal (e.g., "I want to learn Python") so that the system generates a relevant course roadmap.
+
+- As a learner, I want to see a structured course with predefined sections so that I can follow a guided learning path.
+
+- As a learner, I want a simple and intuitive UI to navigate between courses and sections easily.
+
+### **Phase 2: Progress Tracking & Refinements**
+- As a learner, I want to track my progress in each course so that I know what I have completed.
+
+- As a learner, I want to mark a section as completed so that I can move to the next lesson.
+
+- As a learner, I want the system to save my progress so that I can continue where I left off.
+
+- As an administrator, I want to collect feedback from learners so that I can improve course content and recommendations.
+
+### **Phase 3: Adaptive Learning Mode**
+
+- As a learner, I want to take a short quiz after each section so that the system can assess my understanding.
+
+- As a learner, I want AI-generated recommendations for the next section based on my quiz performance so that my learning experience is tailored to my needs.
+
+- As a learner, I want an option to revise topics before moving forward so that I can reinforce my knowledge.
+
+- As a learner, I want a summary of what I have learned so far so that I can review key concepts before advancing.
 
 ---
 
