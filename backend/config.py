@@ -17,4 +17,4 @@ password = urllib.parse.quote_plus("Pramo@123")
 # MongoDB Connection URI
 uri = f"mongodb+srv://{username}:{password}@cluster0.uavqh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 client = MongoClient(uri)
-db = client["auth_db"]
+db = client["skippi"]
