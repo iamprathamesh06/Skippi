@@ -12,7 +12,7 @@ jwt = JWTManager(app)
 
 # Encode special characters in username and password
 username = urllib.parse.quote_plus("iamprathamesh")
-password = urllib.parse.quote_plus("Pramo@123")
+password = urllib.parse.quote_plus("password")
 
 # MongoDB Connection URI
 uri = f"mongodb+srv://{username}:{password}@cluster0.uavqh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
