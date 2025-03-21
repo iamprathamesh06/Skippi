@@ -6,7 +6,7 @@ from langchain_core.runnables import RunnableLambda
 class CourseGenerator:
     def __init__(self):
         self.llm = ChatGroq(
-            api_key='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',
+            api_key='grok_api_key',
             temperature=0,
             model_name="gemma2-9b-it"
         )
