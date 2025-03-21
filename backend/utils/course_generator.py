@@ -72,20 +72,28 @@ class CourseGenerator:
 
     def generate_module_article(self, module):
         """ Generate a detailed article for a module """
+    
+        module_name = module.get("Module Name", "Unnamed Module")
+        topics_list = module.get("Topics Covered", [])
+        free_articles_list = module.get("Free Articles", [])
+        youtube_video_info = module.get("YouTube Video", {})
+    
+        topics_str = ", ".join(topics_list)
+        free_articles_str = "; ".join([f'{item.get("Title", "Untitled")}: {item.get("link", "#")}' for item in free_articles_list])
+        youtube_video_str = f'{youtube_video_info.get("Title", "No Video")}: {youtube_video_info.get("link", "#")}'
+    
+        # Send module details in the prompt
         article = self.article_chain.invoke({
-            "module_name": module["Module Name"],
-            "topics": ", ".join(module["Topics Covered"]),
-            "free_articles": "; ".join(module["Free Articles"]),
-            "youtube_video": module["YouTube Video"]
+            "module_name": module_name,
+            "topics": topics_str,
+            "free_articles": free_articles_str,
+            "youtube_video": youtube_video_str
         })
-
+    
         if hasattr(article, 'content'):
             article = article.content  
-
-        if not article.strip():  
+    
+        if not article.strip():
             raise ValueError("LLM returned an empty response for the article.")
-
-        try:
-            return json.loads(article)
-        except json.JSONDecodeError:
-            raise ValueError(f"Invalid JSON format received from LLM. Raw output: {article}")
+    
+        return article
